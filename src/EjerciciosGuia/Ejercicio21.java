@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package EjerciciosGuia;
-
+import java.util.Scanner;
 /**
  *
  * @author Pablo
@@ -22,6 +22,39 @@ public class Ejercicio21 {
     public static void main(String[] args) {
         int[][] matrizM = new int[10] [10];
         int[][] matrizP = new int[3] [3];
+        llenar(matrizM);
+        imprimir(matrizM);
+        llenar2(matrizP);
+        System.out.println("Buscaremos si los numeros ingresados se encuentran en la matriz principal!");
+        imprimir(matrizP);
     }
-    
+    public static void llenar( int[][] matriz){
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                matriz[i][j] = (int) (Math.random()*9)+1;
+            }
+        }
+    }
+    public static void imprimir(int[][] matriz){
+        for (int[] fila : matriz){
+            for(int numero : fila){
+                System.out.print(numero + " ");
+            }
+            System.out.println("");
+        }
+    }
+    public static void llenar2(int[][] matriz){
+        Scanner scan = new Scanner(System.in);
+        for (int i = 0; i < matriz.length; i++) {
+            for (int j = 0; j < matriz.length; j++) {
+                System.out.println("Ingrese valor " + i + j);
+                matriz[i][j] =  scan.nextInt();
+            }
+        }
+    }
+    public static boolean buscar(int[][] matriz1, int[][] matriz2){
+        boolean check = true;
+        
+        return check;
+    }
 }
