@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package practica;
-import java.util.Scanner;
+
 /**
  *
  * @author Pablo
@@ -15,19 +15,11 @@ public class NewMain {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-    Scanner leer = new Scanner(System.in);
-    
-    System.out.println("Ingrese una frase o palabra");
-    String frase = leer.nextLine();
-    
-    String largo = frase.substring(0, 1);
-
-    if (largo.equals("A")) {
-        System.out.println("Correcto");
-    } else {
-        System.out.println("Incorrecto");
+    String palabra = "gato";
+    int a = (int) ((Math.random()*20) - palabra.length());
+        System.out.println(a);
+        System.out.println(a+palabra.length());
     }
-    }
-    }
+}
     
 
